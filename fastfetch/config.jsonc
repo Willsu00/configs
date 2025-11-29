@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  // ── Logo ─────────────────────────────────────────────────────────
+  "logo": {
+    "type": "builtin",
+    "source": "arch2",
+    "padding": {
+      "top": 1,
+      "bottom": 1
+    }
+  },
+
+  // ── Display Style ───────────────────────────────────────────────
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "4",
+      "title": "6"
+    },
+    "key": {
+      "width": 12,
+      "type": "string"
+    },
+    "bar": {
+      "width": 18,
+      "separate_with_spaces": true
+    }
+  },
+
+  // ── Minimal Essential Modules ───────────────────────────────────
+  "modules": [
+    "title",
+    "separator",
+
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+
+    "shell",
+    "terminal",
+
+    "cpu",
+    "memory",
+    "disk",
+
+    "wm",
+    "de",
+
+    // ── Display module (auto labels: Display 1, Display 2, …) ─────
+    {
+      "type": "display",
+      "key": "Display {index}",
+      "compact": true
+    },
+
+    // ── Blank Spacer Lines ─────────────────────────────────────────
+    {
+      "type": "custom",
+      "format": " "
+    },
+    {
+      "type": "custom",
+      "format": " "
+    }
+  ]
+}
